@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"></link>
+    <title>Create New Post</title>
+  </head>
+  <body>
+ <!-- Heading for the create new post page -->
+<h1>Create a New Post</h1>
+
+<!-- Container for the form and input fields -->
+<div class="container">
+  <!-- Form for submitting a new post with action and method attributes -->
+  <form action="/blogs" method="POST">
+    <!-- Label and input field for the post title -->
+    <label for="title">Title:</label><br />
+    <input type="text" id="title" name="title" /><br />
+
+    <!-- Label and textarea for the post content -->
+    <label for="content">Content:</label><br />
+    <textarea id="content" name="content"></textarea><br />
+
+    <!-- Button to submit the form -->
+    <button type="submit">Submit</button>
+
+    <!-- Anchor tag to cancel and navigate back to the list of posts -->
+    <a id="cancel" href="/blogs">Cancel</a>
+  </form>
+</div>
+
+<!-- Footer section with copyright information and contact details -->
+<div class="footer">
+  <!-- Copyright notice with the current year and website description -->
+  <p>&copy; 2023 Your Website. All rights reserved.</p>
+  
+  <!-- Contact information for the website -->
+  <p>Contact: info@yourwebsite.com</p>
+</div>
+
+  </body>
+</html>

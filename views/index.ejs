@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"></link>
+    <title>Blog Home</title>
+  </head>
+<body>
+<!-- Header section with a large heading for all posts -->
+<h1 class="text">All Posts</h1>
+
+<!-- Link to create a new post, styled as a default button -->
+<a class="button default" href="/blogs/new">Create New Post</a>
+
+<!-- Container for displaying all posts -->
+<div class="posts">
+  <!-- Loop through each post in the posts array -->
+  <% posts.forEach(post => { %>
+    <!-- Container for an individual post -->
+    <div class="post-container">
+      <!-- Display the title of the post -->
+      <h2><%= post.title %></h2>
+      
+      <!-- Display the content of the post -->
+      <p><%= post.content %></p>
+      
+      <!-- Display the creation date of the post -->
+      <p>Posted on: <%= post.created_at %></p>
+
+      <!-- Delete form for removing the post -->
+      <form class="indexForm" action="/blogs/<%= post.id %>/remove" method="post">
+        <!-- Button to submit the form and delete the post -->
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  <% }) %>
+</div>
+
+<!-- Footer section with copyright information and contact details -->
+<div class="footer">
+  <!-- Copyright notice with the current year and website description -->
+  <p>&copy; 2023 the website to showcase your ideas. All rights reserved.</p>
+  
+  <!-- Contact information for the website -->
+  <p>Contact: info@yourwebsite.com</p>
+</div>
+
+  </body>
+</html>
